@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="queroEd.css">
+    <script src="queroEd.js" defer></script>
+
+
+
+    <header class="cabecalho">
+        <img src="logoQueroBolsa.svg" style="width: 180px;margin-bottom: -7px; ">
+        <div
+            style="flex: 1 1 0; align-self: stretch; padding-top: 50px; padding-bottom: 16px; padding-left: 21px; padding-right: 192.38px; justify-content: flex-start; align-items: flex-start; gap: 49.67px; display: inline-flex; ">
+            <div style="margin-top: -25px; margin-left: 10px;">Faculdades</div>
+            <div style="margin-top: -25px;">Cursos</div>
+            <div style="margin-top: -25px;">Profissões</div>
+            <div style="margin-top: -25px;">Revista</div>
+            <div style="margin-top: -25px;">Ajuda</div>
+            <i class="fa-brands fa-whatsapp " style="color: green; margin-left: 20%; margin-top: -40px;"></i>
+            <div class="fa1" style="margin-top: -38px; margin-left: -35px;"><i class="fa fa-question-circle"
+                    aria-hidden="true"></i></div>
+            <i class="entrar" style="margin-top: -40px;">Entrar</i>
+        </div>
+    </header>
+
+
+    <div style="margin-top: 55px;">
+        <img src="fundoQuero1.png" style="width: 100%; padding: -100; margin-bottom: -140px;">
+    </div>
+    <div class="cursos">
+        <div class="sGraduacao1" data-question="Pergunta 1"><a class="fa fa-graduation-cap"aria-hidden="true"></a>Graduação</div>
+        <div class="sGraduacao"><a class="fa fa-suitcase" aria-hidden="true"></a>Pós</div>
+        <div class="sGraduacao"><a class="fa fa-graduation-cap" aria-hidden="true"></a>Escolas</div>
+        <div class="sGraduacao"><a class="fa-solid fa-backpack" aria-hidden="true"></a>Internacional</div>
+        <div class="sGraduacao"><a class="fa fa-wrench" aria-hidden="true"></a>Técnico</div>
+
+    </div>
+    <div class="question" id="question1">
+        <div class="questiona1">
+            <a style="margin-left: 50px; margin-top: 15px;">Qual curso você que estudar?</a>
+            <a style="margin-left: 170px; margin-top: 15px;">Prefere alguma faculdade?</a>
+            <a style="margin-left: 200px; margin-top: 15px;  margin-right: 132px;">Em que cidade quer estudar?</a>
+        </div>
+    </div>
+    <div class="aa">
+        <div>
+            <div class="label">
+                <input list="cursos" id="curso" name="curso" placeholder="Digite o curso">
+                <div id="sugestoes" style="display: none; border: 1px solid #ccc; max-height: 150px; overflow-y: auto;">
+                </div>
+
+                <script>
+                    const sugestoes = [
+                        "Administração",
+                        "Engenharia Civil",
+                        "Medicina",
+                        "Direito",
+                        "Psicologia",
+                        "Arquitetura e Urbanismo",
+                        "Ciências Contábeis",
+                        "Educação Física",
+                        "Nutrição",
+                        "Fisioterapia",
+                        "Odontologia", "Jornalismo", "Publicidade e Propaganda", "Design Gráfico", "Engenharia de Produção",
+                        "Gastronomia", "Farmácia", "Biomedicina", "Letras", "História", "Geografia", "Matemática", "Física", "Química", "Biologia", "Engenharia Elétrica", "Engenharia Mecânica",
+                        "Engenharia de Computação", "Sistemas de Informação", "Ciência da Computação", "Enfermagem", "Medicina Veterinária", "Zootecnia", "Engenharia Ambiental", "Engenharia Química", "Engenharia de Alimentos", "Pedagogia",
+                        "Relações Internacionais", "Filosofia", "Sociologia", "Teatro",
+                        "Engenharia de Software", "Design de Jogos", "Terapia Ocupacional", "Engenharia Biomédica", "Artes Cênicas",
+                        "Engenharia de Petróleo", "Moda e Estilo", "Marketing", "Comunicação Social", "Gestão de Recursos Humanos",
+                        "Agronomia", "Teologia", "Meteorologia", "Engenharia de Pesca", "Cinema e Audiovisual", "Eventos", "Geologia", "Secretariado Executivo", "Gestão Financeira", "Museologia", "Dança", "Produção Cultural",
+                        "Radiologia", "Segurança no Trabalho", "Logística"
+
+                    ];
+
+                    document.getElementById('curso').addEventListener('input', function () {
+                        const input = this.value.toLowerCase();
+                        if (input.length > 1) {
+                            const sugestoesFiltradas = sugestoes.filter((sugestao) => sugestao.toLowerCase().includes(input));
+
+                            const sugestoesHTML = sugestoesFiltradas.map((sugestao) => `<div style="padding: 5px; cursor: pointer;" onmouseover="this.style.backgroundColor='lightblue'" onmouseout="this.style.backgroundColor=''">${sugestao}</div>`).join('');
+                            document.getElementById('sugestoes').innerHTML = sugestoesHTML;
+
+                            if (sugestoesFiltradas.length > 0) {
+                                document.getElementById('sugestoes').setAttribute('style', 'display:block; border: 1px solid #ccc; max-height: 150px; overflow-y: auto;');
+                            } else {
+                                document.getElementById('sugestoes').setAttribute('style', 'display:none;');
+                            }
+                        } else {
+                            document.getElementById('sugestoes').setAttribute('style', 'display:none;');
+                        }
+                    });
+
+                    document.getElementById('curso').addEventListener('blur', function () {
+                        setTimeout(() => {
+                            document.getElementById('sugestoes').setAttribute('style', 'display:none;');
+                        }, 200);
+                    });
+
+                    document.getElementById('sugestoes').addEventListener('click', function (event) {
+                        if (event.target.tagName === 'DIV') {
+                            document.getElementById('curso').value = event.target.textContent;
+                            document.getElementById('sugestoes').setAttribute('style', 'display:none;');
+                        }
+                    });
+                </script>
+
+            </div>
+        </div>
+        <div style="margin-left: 80px;">
+            <div class="label">
+                <input list="cursos" id="curso" name="curso" placeholder="Digite a faculdade">
+                <div id="sugestoes" style="display: none; border: 1px solid #ccc; max-height: 150px; overflow-y: auto;">
+                </div>
+            </div>
+        </div>
+        <div style="margin-left: 80px; margin-right: 40px;">
+            <div class="label">
+                <input list="cursos" id="curso" name="curso">
+                <div id="sugestoes" style="display: none; border: 1px solid #ccc; max-height: 150px; overflow-y: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="question" id="question2">Pergunta 1: Conteúdo da pergunta 1</div> -->
+</head>
+
+<body>
+
+</body>
+
+</html>
