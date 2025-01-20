@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+@import url('https://use.fontawesome.com/releases/v6.4.2/css/all.css');
+@import url('https://use.fontawesome.com/releases/v6.4.2/css/all.css');
+
+
+body{
+    font-family: arial;
+}
+.cabecalho {
+    height: 16px;
+    text-align: center;
+    color: #304FFE;
+    font-size: 16px;
+    font-family: Red Hat Text;
+    font-weight: 600;
+    line-height: 16px;
+    word-wrap: break-word;
+
+
+}
+
+.fa-brands {
+    font-size: 23px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.fa-brands:hover {
+    background-color: rgb(207, 211, 211);
+    transition-delay: 0.2s;
+
+}
+
+.fa-brands::after {
+    content: "Fale com Gabriel!";
+    position: absolute;
+    font-size: 14px;
+    top: 20px;
+    right: 27.5%;
+    padding: 15px;
+    background-color: rgb(0, 0, 0);
+    color: #e2dede;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+}
+
+.fa-brands:hover::after {
+    transition-delay: 0.2s;
+    opacity: 1;
+}
+
+
+.fa1 {
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.fa1:hover {
+    background-color: rgb(207, 211, 211);
+}
+
+.entrar {
+    font-size: 20px;
+    border: 1px solid #304FFE;
+    padding: 14px;
+    border-radius: 10px;
+
+}
+
+.entrar:hover {
+    background-color: rgb(207, 211, 211);
+}
+
+.cursos {
+    text-align: center;
+    display: inline-flex;
+    color: azure;
+    background-color: #242A2E;
+
+    margin-top: -400px;
+    margin-left: 100px;
+}
+
+.sGraduacao1 {
+    font-size: 15px;
+    text-align: center;
+    margin-left: 100px;
+    padding: 25px;
+    cursor: pointer;
+
+}
+
+.sGraduacao {
+    font-size: 15px;
+    text-align: center;
+    margin-left: 100px;
+    border-left: 1px solid #e2dede;
+    padding: 25px;
+
+}
+
+.sPos {
+    font-size: 15px;
+    margin-left: 100px;
+    text-align: center;
+    border-left: 1px solid #e2dede;
+    padding: 25px;
+}
+
+.questiona1 {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    display: inline-flex;
+    padding-bottom: 10px;
+    color: rgb(0, 0, 0);
+    margin-left: 100px;
+
+}
+
+.aa {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    display: inline-flex;
+    padding-bottom: 100px;
+    padding-top: 10px;
+    padding-left: 50px;
+    margin-left: -100px;
+    color: rgb(0, 0, 0);
+    margin-left: 100px;
+
+}
+
+input{
+    width: 250px;
+    padding: 14px;
+    border-radius: 10px;
+    
+}
+
+input[list] {
+    position: relative; /* Define o posicionamento relativo para o campo de entrada */
+  }
+  
+  datalist {
+    position: absolute; /* Define o posicionamento absoluto para a lista de opções */
+    top: 100%; /* Posiciona a lista abaixo do campo de entrada */
+    left: 0; /* Alinha a lista com a borda esquerda do campo de entrada */ 
+  }
+
+input:hover{
+    background-color: #e8e8e8;
+    opacity: 0.5;
+}
+
+input:focus {
+    box-shadow: 0 0 0 3px rgba(48, 79, 254, 1)    ; /* Adiciona uma borda vermelha com 3px de espaçamento quando o input é clicado */
+  }

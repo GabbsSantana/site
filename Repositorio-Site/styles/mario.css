@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+@import url('https://use.fontawesome.com/releases/v6.4.2/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
+@import url('https://use.fontawesome.com/releases/v6.4.2/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+
+
+
+ul{
+    position: relative;
+    transform: skewY(-15deg);
+    text-decoration: none;
+    padding: 0% 0% 20% 8%;
+
+}
+
+li{
+    position: relative;
+    list-style: none;
+    width: 200px;
+    padding: 15px;
+    background: #3e3f36;
+    z-index: calc(1 * var(--i));
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+li:hover{
+    background: #22D4FD;
+    transform:translateX(-50px);
+}
+
+li::before{
+    font-family: "FontAwesome";
+    color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content:attr(data-icon);
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: #2e3133;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+
+li::after{
+    content: "";
+    position: absolute;
+    top:-40px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    background: 35383e;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: o.5s;
+}
+
+li:hover::after {
+    background: #22D4FD;
+}
+
+li a{
+    text-decoration: none;
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+li:hover a{
+    color: #fff
+}
+
+li:last-child::after{
+    box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.4)
+}
+
+body{
+    background: #2e2c2c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.card{
+    display: inline-block;
+    height: 280px;
+    width: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+    position: relative;
+    left: 0px;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.card::before{
+content:"";
+width: 80%;
+height: 50%;
+display: block;
+background: rgba(255 255 255, 0.2);
+backdrop-filter: blur(5px);
+position: absolute;
+z-index: -1;
+border-radius:10px;
+}
+
+.card::after{
+    content:"";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border: 1px solid rgba(255 255 255 / 50%);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card{
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+}
+
+.nature .card:nth-of-type(1){
+    background: url('http://surl.li/cnfxq');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+.container {
+    margin-left: 8rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    width: 1000px;
+    height: 500px;
+    font-family: "Figtree", sans-serif;
+    transition: all 400ms;
+}
+
+.box{
+    position: relative;
+    background: var(--img) center center;
+    background-size: cover;
+    transition: all 400ms;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.box-1{
+    background: url(/assetsGame/gmMario.png) center center;
+    background-size: cover;
+}
+
+.box-2{
+    background: url(/assetsGame/gmPong.png) center center;
+    background-size: cover;
+}
+
+.box-3{
+    opacity: 0.5;
+    background: url(/assetsGame/gmError.png) center center;
+    background-size: cover;
+    cursor: pointer;
+}
+.box-4{
+    opacity: 0.5;
+    background: url(/assetsGame/gmError.png) center center;
+    background-size: cover;
+}
+.box-5{
+    opacity: 0.5;
+    background: url(/assetsGame/gmError.png) center center;
+    background-size: cover;
+}
+.box-6{
+    opacity: 0.5;
+    background: url(/assetsGame/gmError.png) center center;
+    background-size: cover;
+}
+.box-7{
+    opacity: 0.5;
+    background: url(/assetsGame/gmError.png) center center;
+    background-size: cover;
+}
+.box-8{
+    opacity: 0.5;
+    background: url(/assetsGame/gmError.png) center center;
+    background-size: cover;
+}
+
+.box::after{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 100px;
+    margin-left: 90px;
+    background: #000;
+    color: #fff;
+    padding: 10px 10px 10px 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+.container:hover .box{
+   filter: grayscale(100%) opacity(24%); 
+}
+
+.box:hover::after{
+    transform: translateY(o);
+    opacity: 1;
+    transition-delay: 400ms;
+
+}
+
+.container .box:hover{
+    filter: grayscale(0%) opacity(100%);
+}
+
+.container:has(.box-1:hover){
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.container:has(.box-2:hover){
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.container:has(.box-3:hover){
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr 1fr 1fr 1fr;
+}
+.container:has(.box-4:hover){
+    grid-template-columns: 1fr 1fr 1fr 3fr 1fr 1fr 1fr 1fr;
+}
+.container:has(.box-5:hover){
+    grid-template-columns: 1fr 1fr 1fr 1fr 3fr 1fr 1fr 1fr;
+}
+.container:has(.box-6:hover){
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr 1fr 1fr;
+}
+.container:has(.box-7:hover){
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 3fr 1fr;
+}
+.container:has(.box-8:hover){
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+}
+
+.box:nth-child(odd){
+    transform: translateY(-16px);
+}
+
+.box:nth-child(even){
+    transform: translateY(16px);
+}
+
+
+
+
+
+.linguagens{
+    margin-left: 20%;
+    margin-right: 400px;
+    margin-top: 150px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    transition: 0.5s;
+    transform: skewY(-1deg);
+}
+
+.cardL{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transition: 0.5s;
+}
+
+.cardL::before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: #B5FFFC;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5;
+}
+
+.cardL::after{
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 15px;
+    height: 50%;
+    background: #B5FFFC;
+    transform-origin: left;
+    transform: skewY(45deg);
+    transition: 0.5s;
+    border-bottom: 200px solid #B5FFFC;
+}
+
+.cardL:hover{
+    transform: translateY(-40px);
+   
+}
+
+.imgBx{
+    width: 200px;
+    height: 100px;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imgBx .fab{
+    font-size: 3em;
+}
+
+.imgBx .fa-html5 {
+    background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.imgBx .fa-css3-alt{
+    background-color: #409eff;
+    background-image: linear-gradient(45deg, #4f29CD 0%, #409eff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.imgBx .fa-js-square{
+    background-color: #F7ff00;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.imgBx h3{
+    position: relative;
+    margin-top: 10px;
+}
+
+.contentL{
+    position: relative;
+    background: #FFDEE9;
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+    text-align: center;
+}
+
+.contentL:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(transparent, transparent, rgba(0,0,0,0.2));
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.contentL p{
+    font-size: 13px;
+}
+
+.cardL:hover .contentL:before{
+    transform: translateY(40px) skewX(45deg);
+    filter: blur(5px);
+}
+
+.cardL:nth-child(1){
+    z-index: 3;
+}
+
+.cardL:nth-child(2){
+    z-index: 2;
+}
+
+.cardL:nth-child(3){
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+.game-board {
+    width: 80%;
+    height: 500px;
+    border-bottom: 15px solid #4dac4a;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#48caca, #bbf3f3);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 2s infinite linear;
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump{
+    animation: jump 700ms ease-out;
+
+}
+
+.clouds{
+    position: absolute;
+    width: 500px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes pipe-animation{
+    from{
+        right: 0;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+
+    0%{
+        bottom: o;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom:180px;
+    }
+
+    60%{
+        bottom:180px
+    }
+
+    100%{
+        bottom: 0;
+    }
+
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%
+    }
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }

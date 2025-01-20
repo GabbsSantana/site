@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mim</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <ul>
+                <li style="--i:5;" data-icon="&#xf015">
+                    <a href="index.html" >Home</a>
+                </li>
+                <li style="--i:4;" data-icon="&#xf2bb">
+                    <a href="profissional.html">Profissional e Acadêmico</a>
+                </li>
+                <li style="--i:3;" data-icon="&#128100">
+                    <a href="about.html" style="color: azure;">Sobre Mim</a>
+                </li>
+                <li style="--i:2;" data-icon="&#xf07c">
+                    <a href="portifolio.html">Portfolio</a>
+                </li>
+                <li style="--i:1;" data-icon="&#x40">
+                    <a href="contato.html">Contato</a>
+                
+            </ul>
+            <h1  style="margin-top: 300px;margin-left: -150px; white-space: nowrap;"> Um pouco sobre mim, meus entreterimentos favoritos, minha vida academica e profissional</h1>
+            <div class='clock' style="--color: #00f3ff; margin-left: -70px;">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="row" style="margin-top: -80px;">
+            <label style="--color: #00f3ff">
+                <input type="checkbox" id="livrosCheckbox">
+                <div class="icon-wrapper">
+                    <div class="gosto">
+                        <i class="fa fa-book" aria-hidden="true">
+                            <h2 class="gostos" style="font-size: 1.4rem;">Livros</h2>
+                        </i>
+                    </div>
+                </div>
+            </label>
+            <label style="--color: #f00000">
+                <input type="checkbox" id="jogosCheckbox">
+                <div class="icon-wrapper">
+                    <div class="gosto">
+                        <i class="fa fa-gamepad" aria-hidden="true">
+                            <h2 class="gostos" style="font-size: 1.2rem;">Jogos</h2>
+                        </i>
+                    </div>
+                </div>
+            </label>
+            <label style="--color: #ff10f8">
+                <input type="checkbox" id="musicasCheckbox">
+                <div class="icon-wrapper">
+                    <div class="gosto">
+                        <i class="fa fa-music" aria-hidden="true">
+                            <h2 class="gostos" style="font-size: 1.2rem;">Musicas</h2>
+                        </i>
+                    </div>
+                </div>
+            </label>
+            <label style="--color: #fffec8">
+                <input type="checkbox" id="filmesCheckbox">
+                <div class="icon-wrapper">
+                    <div class="gosto">
+                        <i class="fa fa-film" aria-hidden="true">
+                            <h2 class="gostos" style="font-size: 1.2rem;">Filmes</h2>
+                        </i>
+                    </div>
+                </div>
+            </label>
+            <label style="--color: #0f0">
+                <input type="checkbox" id="seriesCheckbox">
+                <div class="icon-wrapper">
+                    <div class="gosto">
+                        <i class="fa fa-television" aria-hidden="true">
+                            <h2 class="gostos" style="font-size: 1.2rem; margin-left: -15%;">Series</h2>
+                        </i>
+                    </div>
+                </div>
+            </label>
+            
+        </div>
+
+        <div class="info-div" style="display: none;">
+
+            <div class="card">
+                <div class="inner" style="display: flex; width: 1100px; margin-left: -420px;">
+                    <img src="assets/GPCapa.svg" style="width: 5500px; height: 300px;">
+                </div>
+                <div class="title">
+                    <img src="assets/Logo_Guerra.png"  style="width: 600px; margin-top: -90px;" >
+                    
+                </div>
+                <div class="title">
+                    <img src="assets/Logo_Guerra.png"  style="width: 600px; margin-top: -89px;" >
+                    
+                </div>
+            </div>
+        </div>
+        <div class="info-div" style="display: none;">
+            <div class="card">
+                <div class="inner" style="display: flex;">
+                    <img src="assets/jogoTLOU.jpg" style="width: 250px; height: 300px;">
+                </div>
+                <div class="title">
+                    <img src="assets/logoTLOU.png"  style="width: 180px; margin-top: -90px;" >
+                    <h2 >The Last Of Us</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-div" style="display: none;">
+            <div class="card">
+                <div class="inner" style="display: flex;">
+                    <img src="assets/pitty.jpg" style="width: 250px; height: 300px;">
+                </div>
+                <div class="title">
+                    <img src="assets/robo.png"  style="width: 250px;" >
+                </div>>
+            </div>
+            <div class="card">
+                <div class="inner">
+                    <img src="assets/dark.jpg" style="width: 250px; height: 300px;">
+                </div>
+                <div class="title">
+                    <img src="assets/logoDark.png"  style="width: 170px; margin-top: -50; margin-left: 50px;" >
+                </div>
+            </div>
+        </div>
+
+        <div class="info-div" style="display: none;">
+            <div class="card">
+                <div class="inner" style="display: flex;">
+                    <img src="assets/filmeFeli.jpg" style="width: 250px; height: 350px;">
+                </div>
+                <img src="assets/logoFeli.png" class="title" style="width: 900px; margin-top: -70px; margin-left: -10px;">
+            </div>
+            <div class="card">
+                <div class="inner" style="display: flex;">
+                    <img src="assets/filmeTudo.jpg" style="width: 250px; height: 350px;">
+                </div>
+                <img src="assets/logoTudo2.png" class="title" style="width: 920px; margin-top: -60px; margin-left: 00px;">
+            </div>
+            
+        </div>
+        
+        <div class="info-div" style="display: none;">
+
+            <p> dafc</p>
+        </div>
+        <div class="info-div" style="display: none;">
+
+            <p> dasjkdfiffc</p>
+        </div>
+        <div class="info-div" style="display: none;">
+
+            <p> trabalhos</p>
+        </div>
+
+
+    </main>
+    <footer class="rodape">
+        <p>
+            &copy Desenvolvido por Gabriel Santana
+        </p>
+    </footer>
+</body>
+
+</html>
+<script src="script.js"></script>
